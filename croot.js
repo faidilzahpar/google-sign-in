@@ -48,7 +48,15 @@ function renderUserUI(user) {
     if(googleBtn) googleBtn.style.display = "none";
 
     document.getElementById("logout-btn").onclick = () => {
+        // 1. Hapus data lokal
         localStorage.removeItem("user_data");
+        
+        // 2. Beritahu sistem Google untuk reset sesi otomatis
+        if (window.google) {
+            google.accounts.id.disableAutoSelect();
+        }
+        
+        // 3. Muat ulang halaman
         location.reload();
     };
 }
