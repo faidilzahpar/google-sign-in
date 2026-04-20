@@ -10,7 +10,7 @@ if (userSesi) {
 }
 
 // 2. CALLBACK SETELAH PILIH AKUN GOOGLE
-window.handleGoogleLogin = (response) => {
+export function handleGoogleLogin(response) {
     setInner("hasil-login", "<i>Memverifikasi ke Backend...</i>");
     
     const dataKirim = { token: response.credential };
@@ -24,6 +24,8 @@ window.handleGoogleLogin = (response) => {
         }
     });
 };
+
+window.handleGoogleLogin = handleGoogleLogin;
 
 // 3. FUNGSI TAMPILAN USER
 function renderUserUI(user) {
