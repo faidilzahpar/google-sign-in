@@ -1,7 +1,7 @@
 import { postJSON } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.8/api.js';
 import { setInner, hide } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.8/element.js';
 
-const BACKEND_URL = "http://charming-tank-nup.sgp.dom.my.id";
+const BACKEND_URL = "https://charming-tank-nup.sgp.dom.my.id/api/auth/google";
 
 // 1. CEK SESI SAAT HALAMAN DIBUKA
 const userSesi = localStorage.getItem("user_data");
